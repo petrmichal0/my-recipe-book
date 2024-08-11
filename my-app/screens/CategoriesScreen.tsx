@@ -7,7 +7,7 @@ import CategoryGridTile from "../components/CategoryGridTile";
 
 type RootStackParamList = {
   Categories: undefined;
-  MealsOverView: undefined;
+  MealsOverView: { categoryId: string; categoryTitle: string };
 };
 
 type CategoriesScreenProps = {
@@ -15,8 +15,11 @@ type CategoriesScreenProps = {
 };
 
 function CategoriesScreen({ navigation }: CategoriesScreenProps) {
-  function pressHandler() {
-    navigation.navigate("MealsOverView");
+  function pressHandler(categoryId: string, categoryTitle: string) {
+    navigation.navigate("MealsOverView", {
+      categoryId: categoryId,
+      categoryTitle: categoryTitle,
+    });
   }
 
   return (
@@ -27,7 +30,7 @@ function CategoriesScreen({ navigation }: CategoriesScreenProps) {
         <CategoryGridTile
           title={itemData.item.title}
           color={itemData.item.color}
-          onPress={pressHandler}
+          onPress={() => pressHandler(itemData.item.id, itemData.item.title)}
         />
       )}
       numColumns={2}
