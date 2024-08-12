@@ -1,5 +1,7 @@
 import { Pressable, Text, View, StyleSheet, Platform } from "react-native";
 
+import { shadowStyles } from "../styles/sharedStyles";
+
 type CategoryGridTileProps = {
   title: string;
   color: string;
@@ -33,12 +35,8 @@ const styles = StyleSheet.create({
     margin: 16,
     height: 150,
     borderRadius: 8,
-    elevation: 1,
     backgroundColor: "#fff",
-    shadowColor: "#black",
-    shadowOpacity: 0.25,
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 4,
+    ...shadowStyles,
     overflow: Platform.select({ android: "hidden", ios: "visible" }),
   },
   button: {
