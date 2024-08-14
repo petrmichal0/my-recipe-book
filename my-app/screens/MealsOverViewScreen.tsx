@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import { View, StyleSheet, FlatList } from "react-native";
 import { RouteProp } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
 
-import { meals } from "../data/dummy-data";
+import { meals, category } from "../data/dummy-data";
 
 import MealItem from "../components/MealItem";
 
@@ -12,6 +14,7 @@ type RootStackParamList = {
 
 type MealsOverViewScreenProps = {
   route: RouteProp<RootStackParamList, "MealsOverView">;
+  navigation: StackNavigationProp<RootStackParamList, "MealsOverView">;
 };
 
 type Meal = {
@@ -27,12 +30,22 @@ type ItemDataProps = {
   item: Meal;
 };
 
-function MealsOverViewScreen({ route }: MealsOverViewScreenProps) {
+function MealsOverViewScreen({ route, navigation }: MealsOverViewScreenProps) {
   const { categoryId } = route.params;
 
   const displayedMeals = meals.filter((meal) => {
     return meal.categoryIds.includes(categoryId);
   });
+
+  useEffect(() => {
+    const categoryTitle =
+      category.find((category) => category.id === categoryId)?.title ||
+      "Default Title";
+
+    navigation.setOptions({
+      title: categoryTitle,
+    });
+  }, [navigation, categoryId]);
 
   function renderMealItem(itemData: ItemDataProps) {
     const item = itemData.item;
