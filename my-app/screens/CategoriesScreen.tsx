@@ -6,8 +6,8 @@ import { category } from "../data/dummy-data";
 import CategoryGridTile from "../components/CategoryGridTile";
 
 type RootStackParamList = {
-  Categories: undefined;
   MealsOverView: { categoryId: string; categoryTitle: string };
+  Categories: undefined;
 };
 
 type CategoriesScreenProps = {

@@ -10,6 +10,7 @@ import { useNavigation } from "@react-navigation/native";
 
 import { shadowStyles } from "../styles/sharedStyles";
 import { StackNavigationProp } from "@react-navigation/stack";
+import MealDetails from "./MealDetails";
 
 type RootStackParamList = {
   MealsOverView: { categoryId: string; categoryTitle: string };
@@ -54,14 +55,12 @@ function MealItem({
         <View style={styles.innerContainer}>
           <Image source={{ uri: imageUrl }} style={styles.image} />
           <Text style={styles.title}>{title}</Text>
-          <View style={styles.details}>
-            <Text style={styles.detailsItem}>{duration} min</Text>
-            <Text style={styles.detailsItem}>{complexity.toUpperCase()}</Text>
-            <Text style={styles.detailsItem}>
-              {affordability.toUpperCase()}
-            </Text>
-          </View>
         </View>
+        <MealDetails
+          duration={duration}
+          complexity={complexity}
+          affordability={affordability}
+        />
       </Pressable>
     </View>
   );
@@ -93,16 +92,5 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 18,
     margin: 8,
-  },
-  details: {
-    flexDirection: "row",
-    alignItems: "center",
-    padding: 8,
-    justifyContent: "center",
-    gap: 12,
-  },
-  detailsItem: {
-    fontSize: 12,
-    color: "dimgray",
   },
 });
