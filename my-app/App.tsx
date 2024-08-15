@@ -5,10 +5,12 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import CategoriesScreen from "./screens/CategoriesScreen";
 import MealsOverViewScreen from "./screens/MealsOverViewScreen";
+import MealDetailScreen from "./screens/MealDetailScreen";
 
 type RootStackParamList = {
   Categories: undefined;
   MealsOverView: { categoryId: string; categoryTitle: string };
+  MealDetail: { mealId: string };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -33,6 +35,13 @@ export default function App() {
             component={MealsOverViewScreen}
             options={{
               title: "All Categories",
+            }}
+          />
+          <Stack.Screen
+            name="MealDetail"
+            component={MealDetailScreen}
+            options={{
+              title: "Meal Detail",
             }}
           />
         </Stack.Navigator>

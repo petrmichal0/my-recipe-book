@@ -6,10 +6,23 @@ import {
   StyleSheet,
   Platform,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import { shadowStyles } from "../styles/sharedStyles";
+import { StackNavigationProp } from "@react-navigation/stack";
+
+type RootStackParamList = {
+  MealsOverView: { categoryId: string; categoryTitle: string };
+  MealDetail: { mealId: string };
+};
+
+type MealDetailNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  "MealDetail"
+>;
 
 type MealItemProps = {
+  id: string;
   title: string;
   imageUrl: string;
   duration: number;
@@ -18,17 +31,25 @@ type MealItemProps = {
 };
 
 function MealItem({
+  id,
   title,
   imageUrl,
   duration,
   complexity,
   affordability,
 }: MealItemProps) {
+  const navigation = useNavigation<MealDetailNavigationProp>();
+
+  function selectMealItemHandler() {
+    navigation.navigate("MealDetail", { mealId: id });
+  }
+
   return (
     <View style={styles.mealItem}>
       <Pressable
         android_ripple={{ color: "#ccc" }}
         style={({ pressed }) => [pressed ? styles.buttonPressed : null]}
+        onPress={selectMealItemHandler}
       >
         <View style={styles.innerContainer}>
           <Image source={{ uri: imageUrl }} style={styles.image} />
