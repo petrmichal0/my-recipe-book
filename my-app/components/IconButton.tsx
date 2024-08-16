@@ -2,7 +2,7 @@ import { Pressable, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 type IconButtonProps = {
-  onPress: () => void;
+  onPress?: () => void;
   icon: keyof typeof Ionicons.glyphMap;
   color: string;
   size?: number;
