@@ -8,9 +8,9 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-import { shadowStyles } from "../styles/sharedStyles";
+import { shadowStyles } from "../../styles/sharedStyles";
 import { StackNavigationProp } from "@react-navigation/stack";
-import MealDetails from "./MealDetails";
+import MealDetails from "../MealDetails";
 
 type RootStackParamList = {
   MealsOverView: { categoryId: string; categoryTitle: string };
