@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Image, Text, View, StyleSheet, ScrollView } from "react-native";
 
 import { meals } from "../data/dummy-data";
@@ -7,6 +7,7 @@ import MealDetails from "../components/MealDetails";
 import Subtitle from "../components/MealDetail/Subtitle";
 import List from "../components/MealDetail/List";
 import IconButton from "../components/IconButton";
+import { FavoritesContext } from "../store/context/favorites-context";
 
 type MealDetailScreenProps = {
   route: { params: { mealId: string } };
@@ -14,12 +15,20 @@ type MealDetailScreenProps = {
 };
 
 function MealDetailScreen({ route, navigation }: MealDetailScreenProps) {
+  const { removeFavorite, addFavorite, ids } = useContext(FavoritesContext);
+
   const { mealId } = route.params;
+
+  const mealIsFavorite = ids.includes(mealId);
 
   const selectedMeal = meals.find((meal) => mealId === meal.id);
 
-  function headerButtonPressHandler() {
-    console.log("pressed!");
+  function changeFavoriteStatusHandler() {
+    if (mealIsFavorite) {
+      removeFavorite(mealId);
+    } else {
+      addFavorite(mealId);
+    }
   }
 
   useEffect(() => {
@@ -27,14 +36,14 @@ function MealDetailScreen({ route, navigation }: MealDetailScreenProps) {
       headerRight: () => {
         return (
           <IconButton
-            icon="heart"
+            icon={mealIsFavorite ? "heart" : "heart-outline"}
             color="white"
-            onPress={headerButtonPressHandler}
+            onPress={changeFavoriteStatusHandler}
           />
         );
       },
     });
-  }, [navigation, headerButtonPressHandler]);
+  }, [navigation, changeFavoriteStatusHandler]);
 
   return (
     <View style={styles.rootContainer}>
