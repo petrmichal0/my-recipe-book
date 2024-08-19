@@ -18,9 +18,17 @@ type MealDetailScreenProps = {
   navigation: { setOptions: (options: any) => void };
 };
 
+type RootState = {
+  favoriteMeals: {
+    ids: string[];
+  };
+};
+
 function MealDetailScreen({ route, navigation }: MealDetailScreenProps) {
   // const { removeFavorite, addFavorite, ids } = useContext(FavoritesContext);
-  const favoriteMealIds = useSelector((state) => state.favoriteMeals.ids);
+  const favoriteMealIds = useSelector(
+    (state: RootState) => state.favoriteMeals.ids
+  );
   const dispatch = useDispatch();
 
   const { mealId } = route.params;
