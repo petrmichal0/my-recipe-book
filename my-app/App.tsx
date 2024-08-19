@@ -4,7 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Ionicons } from "@expo/vector-icons";
-import FavoriteContextProvider from "./store/context/favorites-context";
+import FavoritesContextProvider from "./store/context/favorites-context";
 
 import CategoriesScreen from "./screens/CategoriesScreen";
 import MealsOverViewScreen from "./screens/MealsOverViewScreen";
@@ -60,7 +60,7 @@ export default function App() {
   return (
     <>
       <StatusBar style="dark" />
-      <FavoriteContextProvider>
+      <FavoritesContextProvider>
         <NavigationContainer>
           <Stack.Navigator
             initialRouteName="Categories"
@@ -92,7 +92,7 @@ export default function App() {
             />
           </Stack.Navigator>
         </NavigationContainer>
-      </FavoriteContextProvider>
+      </FavoritesContextProvider>
     </>
   );
 }
