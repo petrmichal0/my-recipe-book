@@ -14,7 +14,8 @@
     },
     "ios": {
       "buildNumber": "1.0.0",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.petrmichal0.myrecipebook"
     },
     "android": {
       "versionCode": 1,
