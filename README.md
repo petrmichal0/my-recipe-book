@@ -160,3 +160,20 @@ My Recipe Book/
 ├── tsconfig.json
 └── .gitignore
 ```
+
+## Technologies Used
+
+[![React Native Badge](https://img.shields.io/badge/-React_Native-61DAFB?style=for-the-badge&labelColor=black&logo=react&logoColor=61DAFB)](#)
+[![Expo Badge](https://img.shields.io/badge/-Expo-000020?style=for-the-badge&labelColor=black&logo=expo&logoColor=white)](#)
+
+## Third-Party Libraries
+
+- **Expo**: Used for rapid development and easy deployment.
+- **React Navigation**: Provides navigation capabilities.
+- **Redux Toolkit**: Manages state using a Redux store.
+- **React Native Reanimated**: Enables animations and gestures.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
