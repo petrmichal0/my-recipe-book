@@ -121,7 +121,7 @@ The easiest way to try the app is by using **Expo Go**. Simply download the [Exp
 
 <img src="https://github.com/user-attachments/assets/7ce6f21b-e2e1-404d-886e-81f0b321a54c" alt="QR Code for Expo" width="200">
 
-Alternatively, you can open the app directly in Snack using this link: [Open in Snack](https://snack.expo.dev/@petrmichal0/my-recipe-book-v1).
+Alternatively, you can open the app directly in Snack using this link: [Open in Snack](https://snack.expo.dev/@petrmichal0/my-recipe-book-v1?platform=android).
 
 ### 2. Download the App Directly
 
