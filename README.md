@@ -26,7 +26,7 @@ My Recipe Book is a React Native application that allows users to explore and ma
 - Detailed recipe views with ingredients and preparation steps.
 - Mark recipes as favorites and access them easily.
 - Smooth transitions and animations throughout the app.
-- Responsive UI for both Android and iOS.
+- Responsive UI for Android.
 
 ## Installation (for Development)
 
