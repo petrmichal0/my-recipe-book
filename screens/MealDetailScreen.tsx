@@ -1,5 +1,5 @@
 // import { useContext } from "react";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { Image, Text, View, StyleSheet, ScrollView } from "react-native";
 
 import { meals } from "../data/dummy-data";
@@ -38,29 +38,25 @@ function MealDetailScreen({ route, navigation }: MealDetailScreenProps) {
 
   const selectedMeal = meals.find((meal) => mealId === meal.id);
 
-  function changeFavoriteStatusHandler() {
+  const changeFavoriteStatusHandler = useCallback(() => {
     if (mealIsFavorite) {
-      // removeFavorite(mealId);
       dispatch(removeFavorite({ id: mealId }));
     } else {
-      // addFavorite(mealId);
       dispatch(addFavorite({ id: mealId }));
     }
-  }
+  }, [mealIsFavorite, mealId, dispatch]);
 
   useEffect(() => {
     navigation.setOptions({
-      headerRight: () => {
-        return (
-          <IconButton
-            icon={mealIsFavorite ? "heart" : "heart-outline"}
-            color="white"
-            onPress={changeFavoriteStatusHandler}
-          />
-        );
-      },
+      headerRight: () => (
+        <IconButton
+          icon={mealIsFavorite ? "heart" : "heart-outline"}
+          color="white"
+          onPress={changeFavoriteStatusHandler}
+        />
+      ),
     });
-  }, [navigation, changeFavoriteStatusHandler]);
+  }, [navigation, changeFavoriteStatusHandler, mealIsFavorite]);
 
   return (
     <View style={styles.rootContainer}>
