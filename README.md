@@ -7,7 +7,7 @@ My Recipe Book is a React Native application that allows users to explore and ma
 ![Static Badge](https://img.shields.io/badge/status-online-brightgreen)
 
 ## Quick Look
-<img src="https://github.com/user-attachments/assets/590b7692-f9f0-4392-be4b-18aa8eefd2f6" width="250" alt="My Recipe Book App Demo">
+<img src="https://github.com/user-attachments/assets/b63eba49-17db-4003-98d6-e84473b3c15d" width="250" alt="My Recipe Book App Demo">
 
 ## Table of Content
 - [Project Title and Description](#project-title-and-description)
@@ -71,35 +71,45 @@ To run the app on a simulator or physical device:
     npm run android
     ```
 
-- For iOS:
-    ```bash
-    npm run ios
-    ```
-
 ## Screenshots
 
 <table>
   <tr>
     <th>Categories Screen</th>
+    <th>Category List</th>
     <th>Recipe Details</th>
+    <th>Option Window</th>
     <th>Favorites Screen</th>
   </tr>
   <tr>
     <td style="border: 1px solid black;">
-      <a href="https://github.com/user-attachments/assets/646112af-a883-4ac8-9756-2c6049e56ddc" target="_blank">
-        <img src="https://github.com/user-attachments/assets/646112af-a883-4ac8-9756-2c6049e56ddc" width="130" height="300" alt="Categories Screen">
+      <a href="https://github.com/user-attachments/assets/f7509fc8-8cc7-4160-9fd5-51e6de750105" target="_blank">
+        <img src="https://github.com/user-attachments/assets/f7509fc8-8cc7-4160-9fd5-51e6de750105" width="130" height="300" alt="Categories Screen">
+      </a>
+    </td>
+      </td>
+    <td style="border: 1px solid black;">
+      <a href="https://github.com/user-attachments/assets/acdc16bc-466c-48bf-a171-c7c6ad23c9d9" target="_blank">
+        <img src="https://github.com/user-attachments/assets/acdc16bc-466c-48bf-a171-c7c6ad23c9d9" width="130" height="300" alt="Recipe Details">
       </a>
     </td>
     <td style="border: 1px solid black;">
-      <a href="https://github.com/user-attachments/assets/866db1f7-3285-42e1-b282-1390e822759c" target="_blank">
-        <img src="https://github.com/user-attachments/assets/866db1f7-3285-42e1-b282-1390e822759c" width="130" height="300" alt="Recipe Details">
+      <a href="https://github.com/user-attachments/assets/3ebf04c3-2b84-4c67-b982-2cb7cd758563" target="_blank">
+        <img src="https://github.com/user-attachments/assets/3ebf04c3-2b84-4c67-b982-2cb7cd758563" width="130" height="300" alt="Favorites Screen">
       </a>
+    </td>
     </td>
     <td style="border: 1px solid black;">
-      <a href="https://github.com/user-attachments/assets/018125fb-0fa4-413d-86a4-c1cb108edd43" target="_blank">
-        <img src="https://github.com/user-attachments/assets/018125fb-0fa4-413d-86a4-c1cb108edd43" width="130" height="300" alt="Favorites Screen">
+      <a href="https://github.com/user-attachments/assets/b5181b85-4481-4acf-90dd-e85256035815" target="_blank">
+        <img src="https://github.com/user-attachments/assets/b5181b85-4481-4acf-90dd-e85256035815" width="130" height="300" alt="Favorites Screen">
       </a>
     </td>
+      <td style="border: 1px solid black;">
+      <a href="https://github.com/user-attachments/assets/127465c5-74f3-4134-8fc8-e2ead2614704" target="_blank">
+        <img src="https://github.com/user-attachments/assets/127465c5-74f3-4134-8fc8-e2ead2614704" width="130" height="300" alt="Favorites Screen">
+      </a>
+    </td>
+    
   </tr>
 </table>
 
