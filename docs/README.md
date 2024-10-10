@@ -85,8 +85,7 @@ To run the app on a simulator or physical device:
       <a href="https://github.com/user-attachments/assets/f7509fc8-8cc7-4160-9fd5-51e6de750105" target="_blank">
         <img src="https://github.com/user-attachments/assets/f7509fc8-8cc7-4160-9fd5-51e6de750105" width="130" height="300" alt="Categories Screen">
       </a>
-    </td>
-      </td>
+    </td>      
     <td style="border: 1px solid black;">
       <a href="https://github.com/user-attachments/assets/acdc16bc-466c-48bf-a171-c7c6ad23c9d9" target="_blank">
         <img src="https://github.com/user-attachments/assets/acdc16bc-466c-48bf-a171-c7c6ad23c9d9" width="130" height="300" alt="Recipe Details">
@@ -97,13 +96,12 @@ To run the app on a simulator or physical device:
         <img src="https://github.com/user-attachments/assets/3ebf04c3-2b84-4c67-b982-2cb7cd758563" width="130" height="300" alt="Favorites Screen">
       </a>
     </td>
-    </td>
     <td style="border: 1px solid black;">
       <a href="https://github.com/user-attachments/assets/b5181b85-4481-4acf-90dd-e85256035815" target="_blank">
         <img src="https://github.com/user-attachments/assets/b5181b85-4481-4acf-90dd-e85256035815" width="130" height="300" alt="Favorites Screen">
       </a>
     </td>
-      <td style="border: 1px solid black;">
+    <td style="border: 1px solid black;">
       <a href="https://github.com/user-attachments/assets/127465c5-74f3-4134-8fc8-e2ead2614704" target="_blank">
         <img src="https://github.com/user-attachments/assets/127465c5-74f3-4134-8fc8-e2ead2614704" width="130" height="300" alt="Favorites Screen">
       </a>
