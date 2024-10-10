@@ -31,7 +31,6 @@ function FavoritesScreen() {
         <Text style={styles.text}>No favorite meals found.</Text>
       </View>
     );
-  } else {
   }
 
   return <MealList items={favoriteMeals} />;
